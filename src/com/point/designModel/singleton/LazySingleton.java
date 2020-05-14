@@ -11,7 +11,7 @@ public class LazySingleton {
 
     public static LazySingleton getInstance(){
         if (instance == null){
-            synchronized (LazySingleton.class){
+            synchronized (LazySingleton.class){ // 锁定类型的相关静态方法
                 if (instance == null){
                     instance = new LazySingleton();
                 }
