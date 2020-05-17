@@ -12,7 +12,7 @@ public class Client {
         // 1 创建客户端 并指定服务端及端口
         Socket client = new Socket("localhost", 8888);
         // 多线程
-        new Thread(new Send(client)).start(); // 客户端1
-        new Thread(new Send(client)).start(); // 客户端2
+        new Thread(new Send(client)).start(); // 消息发送者
+        new Thread(new Receiver(client)).start(); // 消息接受者
     }
 }
