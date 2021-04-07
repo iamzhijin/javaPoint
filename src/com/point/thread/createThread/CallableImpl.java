@@ -1,12 +1,14 @@
-package com.point.thread;
+package com.point.thread.createThread;
 
 import java.util.Random;
 import java.util.concurrent.Callable;
 
 /**
  * Created by lzhijin Cotter on 2020/4/4.
+ *
+ * 实现Callable 并定好返回结果类型
  */
-public class CreateThreadUseCallable implements Callable<Integer> {
+public class CallableImpl implements Callable<Integer> {
 
     //实现call方法
     public Integer call() throws Exception {
